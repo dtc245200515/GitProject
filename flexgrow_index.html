@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-grow Practice</title>
+    <link rel="stylesheet" href="flexgrow_style.css">
+</head>
+<body>
+    <div class="section">
+        <h2>1. flex-grow: Tất cả bằng nhau (grow: 1)</h2>
+        <p>5 item với flex-grow: 1 - chia đều không gian</p>
+        <div class="container example1">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>2. flex-grow: Item 2 grow: 2 (lớn hơn)</h2>
+        <p>Item 2 có flex-grow: 2, các item khác có flex-grow: 1</p>
+        <div class="container example2">
+            <div class="item">Item 1<br><small>(grow: 1)</small></div>
+            <div class="item item2">Item 2<br><small>(grow: 2)</small></div>
+            <div class="item">Item 3<br><small>(grow: 1)</small></div>
+            <div class="item">Item 4<br><small>(grow: 1)</small></div>
+            <div class="item">Item 5<br><small>(grow: 1)</small></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>3. flex-grow: Item 2 grow: 3 (lớn nhất)</h2>
+        <p>Item 2 có flex-grow: 3, các item khác có flex-grow: 1</p>
+        <div class="container example3">
+            <div class="item">Item 1<br><small>(grow: 1)</small></div>
+            <div class="item item3">Item 2<br><small>(grow: 3)</small></div>
+            <div class="item">Item 3<br><small>(grow: 1)</small></div>
+            <div class="item">Item 4<br><small>(grow: 1)</small></div>
+            <div class="item">Item 5<br><small>(grow: 1)</small></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>4. flex-grow: Tỉ lệ khác nhau (1:2:1:2:1)</h2>
+        <p>5 item với flex-grow: 1, 2, 1, 2, 1</p>
+        <div class="container example4">
+            <div class="item item4-1">Item 1<br><small>(grow: 1)</small></div>
+            <div class="item item4-2">Item 2<br><small>(grow: 2)</small></div>
+            <div class="item item4-3">Item 3<br><small>(grow: 1)</small></div>
+            <div class="item item4-4">Item 4<br><small>(grow: 2)</small></div>
+            <div class="item item4-5">Item 5<br><small>(grow: 1)</small></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>5. flex-grow: Không có grow (grow: 0)</h2>
+        <p>5 item với flex-grow: 0 - không phát triển</p>
+        <div class="container example5">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+        </div>
+    </div>
+</body>
+</html>

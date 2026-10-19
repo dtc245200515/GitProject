@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.section {
+    margin-bottom: 40px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #4CAF50;
+}
+
+.container {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 2px solid #333;
+    border-radius: 4px;
+}
+
+.item {
+    padding: 20px;
+    background-color: lightblue;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid #0099cc;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+small {
+    font-size: 12px;
+    color: #555;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+/* 1. flex-basis với đơn vị px */
+.example1 {
+    width: 600px;
+    height: 100px;
+}
+
+.example1 .item {
+    flex-basis: 200px;
+}
+
+.example1 .item2 {
+    flex-basis: 100px;
+}
+
+.example1 .item3 {
+    flex-basis: 150px;
+}
+
+/* 2. flex-basis với % */
+.example2 {
+    width: 600px;
+    height: 100px;
+}
+
+.example2 .item {
+    flex-basis: 50%;
+}
+
+/* 3. flex-basis với flex-direction: column */
+.example3 {
+    flex-direction: column;
+    width: 300px;
+    height: 350px;
+}
+
+.example3 .item {
+    flex-basis: 100px;
+}
+
+/* 4. flex-basis kết hợp với flex-grow */
+.example4 {
+    width: 600px;
+    height: 100px;
+}
+
+.example4 .item {
+    flex-basis: 100px;
+}
+
+.example4 .item4-1 {
+    flex-grow: 1;
+}
+
+.example4 .item4-2 {
+    flex-grow: 2;
+    background-color: #90EE90;
+}
+
+.example4 .item4-3 {
+    flex-grow: 1;
+}
+
+/* 5. flex-basis: auto */
+.example5 {
+    width: 600px;
+    height: 100px;
+}
+
+.example5 .item {
+    flex-basis: auto;
+    width: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-wrap: wrap;
+    }
+
+    .example1,
+    .example2,
+    .example4 {
+        width: 100%;
+    }
+
+    .example3 {
+        width: 100%;
+        height: auto;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .item {
+        font-size: 14px;
+    }
+}

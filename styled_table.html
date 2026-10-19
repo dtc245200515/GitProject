@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng Có Định Kiểu CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .table-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        /* Đường viền bảng */
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        /* Chiều rộng và chiều cao */
+        table {
+            width: 100%;
+        }
+
+        th {
+            height: 50px;
+        }
+
+        /* Căn chỉnh theo chiều ngang */
+        th {
+            text-align: left;
+        }
+
+        /* Căn chỉnh theo chiều dọc */
+        td {
+            height: 80px;
+            vertical-align: bottom;
+        }
+
+        /* Padding trong bảng */
+        th, td {
+            padding: 15px;
+        }
+
+        /* Màu sắc */
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        td {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bảng Có Định Kiểu CSS</h1>
+
+    <div class="table-container">
+        <h2>Danh Sách Học Sinh</h2>
+        <table>
+            <tr>
+                <th>Họ tên</th>
+                <th>Tuổi</th>
+                <th>Lớp</th>
+            </tr>
+            <tr>
+                <td>Nguyễn Văn A</td>
+                <td>20</td>
+                <td>Web</td>
+            </tr>
+            <tr>
+                <td>Trần Thị B</td>
+                <td>21</td>
+                <td>Web</td>
+            </tr>
+            <tr>
+                <td>Lê Văn C</td>
+                <td>19</td>
+                <td>Java</td>
+            </tr>
+            <tr>
+                <td>Phạm Thị D</td>
+                <td>20</td>
+                <td>Python</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="table-container">
+        <h2>Danh Sách Điểm</h2>
+        <table>
+            <tr>
+                <th>Tên Học Sinh</th>
+                <th>Toán</th>
+                <th>Văn</th>
+                <th>Anh</th>
+            </tr>
+            <tr>
+                <td>Nguyễn Văn A</td>
+                <td>8.5</td>
+                <td>7.0</td>
+                <td>8.0</td>
+            </tr>
+            <tr>
+                <td>Trần Thị B</td>
+                <td>9.0</td>
+                <td>8.5</td>
+                <td>9.0</td>
+            </tr>
+            <tr>
+                <td>Lê Văn C</td>
+                <td>7.5</td>
+                <td>8.0</td>
+                <td>7.5</td>
+            </tr>
+            <tr>
+                <td>Phạm Thị D</td>
+                <td>9.5</td>
+                <td>9.0</td>
+                <td>8.5</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SASS Practice - Advanced Styling</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">MyWebsite</div>
+        <ul class="nav-list">
+            <li><a href="#home">Trang chủ</a></li>
+            <li><a href="#about">Giới thiệu</a></li>
+            <li><a href="#features">Tính năng</a></li>
+            <li><a href="#contact">Liên hệ</a></li>
+        </ul>
+        <div class="search-box">
+            <input type="text" placeholder="Tìm kiếm...">
+            <button class="btn btn-primary">Tìm</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div>
+            <h1>Chào mừng đến với SASS Practice</h1>
+            <p>Khám phá sức mạnh của SASS với Variables, Mixins, Nesting, và Responsive Design</p>
+            <button class="btn btn-success">Bắt đầu</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section section-light" id="about">
+        <div class="container">
+            <h2>Về SASS</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">
+                SASS (Syntactically Awesome StyleSheets) là một CSS preprocessor giúp viết CSS một cách hiệu quả hơn.
+                Nó hỗ trợ các tính năng như variables, mixins, nesting, functions, và nhiều hơn nữa.
+            </p>
+
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Variables</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Khai báo các biến màu, kích thước, font chữ để tái sử dụng trong toàn bộ stylesheet.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Mixins</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Tạo các khối CSS tái sử dụng (reusable code blocks) để giảm lặp lại.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Nesting</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Lồng các selector CSS giúp code dễ đọc và tổ chức hơn.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Functions</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Sử dụng các hàm có sẵn như lighten(), darken(), rgba() để thao tác màu sắc.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Responsive Design</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Media queries và mixins giúp tạo responsive design dễ dàng hơn.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Import</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Chia nhỏ stylesheet thành nhiều file và import chúng vào một file chính.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section" id="features">
+        <div class="container">
+            <h2>Các Tính Năng Chính</h2>
+
+            <div style="margin-top: 2rem;">
+                <h3 class="text-primary">1. Variables (Biến)</h3>
+                <p>
+                    Các biến trong SASS giúp bạn lưu trữ các giá trị như màu sắc, font chữ, kích thước, độ rộng lề, v.v.
+                    Thay vì lặp lại các giá trị này trong mã CSS, bạn chỉ cần thay đổi giá trị của biến một lần.
+                </p>
+                <div class="card p-lg mt-lg">
+                    <code>$primary-color: #667eea;<br>$base-font: 'Segoe UI', sans-serif;<br>color: $primary-color;</code>
+                </div>
+            </div>
+
+            <div style="margin-top: 2rem;">
+                <h3 class="text-success">2. Mixins (Hỗn hợp)</h3>
+                <p>
+                    Mixins cho phép bạn tạo các khối CSS tái sử dụng. Chúng rất hữu ích cho các phần tử CSS phức tạp
+                    hoặc lặp lại như flexbox, transition, button variants, v.v.
+                </p>
+                <div class="card p-lg mt-lg">
+                    <code>@mixin flex-center {<br>&nbsp;&nbsp;display: flex;<br>&nbsp;&nbsp;justify-content: center;<br>&nbsp;&nbsp;align-items: center;<br>}</code>
+                </div>
+            </div>
+
+            <div style="margin-top: 2rem;">
+                <h3 class="text-info">3. Nesting (Lồng nhau)</h3>
+                <p>
+                    SASS cho phép bạn lồng các CSS selector lại với nhau, giúp mã code dễ đọc và tổ chức hơn.
+                    Điều này giúp giảm độ lặp lại và làm cho mã code trở nên rõ ràng hơn.
+                </p>
+                <div class="card p-lg mt-lg">
+                    <code>.navbar {<br>&nbsp;&nbsp;background: black;<br>&nbsp;&nbsp;.nav-list {<br>&nbsp;&nbsp;&nbsp;&nbsp;display: flex;<br>&nbsp;&nbsp;}<br>}</code>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section section-light" id="contact">
+        <div class="container" style="max-width: 600px;">
+            <h2>Liên hệ với chúng tôi</h2>
+
+            <form>
+                <div class="form-group">
+                    <label for="name">Tên của bạn</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Tin nhắn</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Gửi</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 SASS Practice Website. All rights reserved.</p>
+        <div>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+</body>
+</html>

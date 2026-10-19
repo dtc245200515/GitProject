@@ -1,0 +1,406 @@
+// Import variables and mixins
+@import 'variables';
+@import 'mixins';
+
+// Reset and Base Styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $base-font;
+    font-size: $base-font-size;
+    line-height: 1.6;
+    color: $dark-color;
+    background-color: $light-color;
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+    font-family: $heading-font;
+    font-weight: 700;
+    margin-bottom: $spacing-md;
+    color: $dark-color;
+}
+
+h1 {
+    font-size: $heading-size;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+p {
+    margin-bottom: $spacing-md;
+    line-height: 1.8;
+}
+
+a {
+    color: $primary-color;
+    text-decoration: none;
+    @include transition;
+
+    &:hover {
+        color: $secondary-color;
+        text-decoration: underline;
+    }
+}
+
+// Navbar
+.navbar {
+    @include flex-between;
+    background-color: $dark-color;
+    color: white;
+    padding: $spacing-md $spacing-lg;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: $box-shadow-md;
+
+    .logo {
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .nav-list {
+        @include flex-between;
+        list-style: none;
+        gap: $spacing-lg;
+        flex: 1;
+        margin-left: $spacing-xl;
+
+        li a {
+            color: white;
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+
+    .search-box {
+        @include flex-center;
+        gap: $spacing-sm;
+
+        input {
+            padding: $spacing-sm $spacing-md;
+            border: 1px solid $border-color;
+            border-radius: $border-radius-sm;
+        }
+    }
+}
+
+// Buttons
+.btn {
+    @include button-base;
+
+    &-primary {
+        @include button-variant($primary-color);
+    }
+
+    &-secondary {
+        @include button-variant($secondary-color);
+    }
+
+    &-success {
+        @include button-variant($success-color);
+    }
+
+    &-danger {
+        @include button-variant($danger-color);
+    }
+
+    &-warning {
+        @include button-variant($warning-color);
+    }
+
+    &-info {
+        @include button-variant($info-color);
+    }
+}
+
+// Sections
+.hero-section {
+    @include gradient($primary-color, $secondary-color);
+    color: white;
+    padding: $spacing-xxl $spacing-lg;
+    text-align: center;
+    min-height: 400px;
+    @include flex-center;
+
+    h1 {
+        color: white;
+        margin-bottom: $spacing-lg;
+    }
+
+    p {
+        font-size: 18px;
+        margin-bottom: $spacing-lg;
+    }
+}
+
+.section {
+    @include container;
+    padding: $spacing-xxl $spacing-md;
+
+    h2 {
+        margin-bottom: $spacing-xl;
+        text-align: center;
+    }
+}
+
+.section-light {
+    background-color: $light-color;
+}
+
+// Cards
+.card {
+    @include card;
+
+    &-header {
+        padding-bottom: $spacing-md;
+        border-bottom: 2px solid $border-color;
+        margin-bottom: $spacing-md;
+    }
+
+    &-body {
+        padding: $spacing-md 0;
+    }
+
+    &-footer {
+        padding-top: $spacing-md;
+        border-top: 2px solid $border-color;
+    }
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $spacing-xl;
+    margin-top: $spacing-xl;
+
+    .card {
+        h3 {
+            color: $primary-color;
+        }
+    }
+}
+
+// Forms
+.form-group {
+    margin-bottom: $spacing-lg;
+
+    label {
+        display: block;
+        margin-bottom: $spacing-sm;
+        font-weight: 600;
+        color: $dark-color;
+    }
+
+    input,
+    textarea,
+    select {
+        width: 100%;
+        padding: $spacing-md;
+        border: 1px solid $border-color;
+        border-radius: $border-radius-sm;
+        font-family: $base-font;
+        font-size: $base-font-size;
+        @include transition;
+
+        &:focus {
+            outline: none;
+            border-color: $primary-color;
+            box-shadow: 0 0 0 3px rgba($primary-color, 0.1);
+        }
+    }
+
+    textarea {
+        resize: vertical;
+        min-height: 120px;
+    }
+}
+
+// Footer
+footer {
+    background-color: $dark-color;
+    color: white;
+    text-align: center;
+    padding: $spacing-xl $spacing-lg;
+    margin-top: $spacing-xxl;
+    border-top: 3px solid $primary-color;
+
+    p {
+        color: #aaa;
+        margin-bottom: $spacing-sm;
+    }
+
+    a {
+        color: white;
+        margin: 0 $spacing-md;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}
+
+// Utility Classes
+.container {
+    @include container;
+}
+
+.flex-center {
+    @include flex-center;
+}
+
+.flex-between {
+    @include flex-between;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-primary {
+    color: $primary-color;
+}
+
+.text-success {
+    color: $success-color;
+}
+
+.text-danger {
+    color: $danger-color;
+}
+
+.bg-light {
+    background-color: $light-color;
+}
+
+.bg-dark {
+    background-color: $dark-color;
+    color: white;
+}
+
+.mt {
+    &-sm {
+        margin-top: $spacing-sm;
+    }
+
+    &-md {
+        margin-top: $spacing-md;
+    }
+
+    &-lg {
+        margin-top: $spacing-lg;
+    }
+
+    &-xl {
+        margin-top: $spacing-xl;
+    }
+}
+
+.mb {
+    &-sm {
+        margin-bottom: $spacing-sm;
+    }
+
+    &-md {
+        margin-bottom: $spacing-md;
+    }
+
+    &-lg {
+        margin-bottom: $spacing-lg;
+    }
+
+    &-xl {
+        margin-bottom: $spacing-xl;
+    }
+}
+
+.p {
+    &-sm {
+        padding: $spacing-sm;
+    }
+
+    &-md {
+        padding: $spacing-md;
+    }
+
+    &-lg {
+        padding: $spacing-lg;
+    }
+
+    &-xl {
+        padding: $spacing-xl;
+    }
+}
+
+// Responsive Design
+@include respond-to('medium') {
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: $spacing-md;
+
+        .nav-list {
+            margin-left: 0;
+            flex-direction: column;
+        }
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: $spacing-xl $spacing-md;
+    }
+}
+
+@include respond-to('small') {
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .navbar {
+        padding: $spacing-md $spacing-sm;
+
+        .logo {
+            font-size: 18px;
+        }
+    }
+
+    .hero-section {
+        padding: $spacing-xl $spacing-sm;
+        min-height: 300px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}

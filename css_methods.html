@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ba Cách Nhúng CSS</title>
+    <link rel="stylesheet" href="css_methods.css">
+    <style>
+        /* Internal Style */
+        .internal-heading {
+            color: #2196F3;
+            font-size: 24px;
+            margin: 20px 0;
+        }
+
+        .internal-text {
+            color: #1976D2;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Phần 1: Inline Style -->
+        <section>
+            <h2 style="color: #FF5722; font-size: 24px; margin: 20px 0;">Phần 1: Inline Style</h2>
+            <p style="color: #E64A19; font-size: 16px; line-height: 1.6;">
+                Đây là cách thay đổi màu sắc sử dụng inline style.
+                Chúng ta áp dụng CSS trực tiếp vào thẻ HTML bằng thuộc tính <strong>style</strong>.
+                Ưu điểm: nhanh chóng và dễ dàng.
+                Nhược điểm: khó quản lý khi có nhiều phần tử.
+            </p>
+        </section>
+
+        <!-- Phần 2: Internal Style -->
+        <section>
+            <h2 class="internal-heading">Phần 2: Internal Style</h2>
+            <p class="internal-text">
+                Đây là cách thay đổi màu sắc sử dụng internal style.
+                Chúng ta định nghĩa CSS bên trong thẻ &lt;style&gt; trong phần &lt;head&gt;.
+                Ưu điểm: dễ quản lý và có thể tái sử dụng.
+                Nhược điểm: chỉ áp dụng cho một trang web duy nhất.
+            </p>
+        </section>
+
+        <!-- Phần 3: External Style -->
+        <section>
+            <h2 class="external-heading">Phần 3: External Style</h2>
+            <p class="external-text">
+                Đây là cách thay đổi màu sắc sử dụng external style.
+                Chúng ta tạo một file CSS riêng biệt và kết nối vào trang HTML bằng thẻ &lt;link&gt;.
+                Ưu điểm: dễ quản lý, có thể tái sử dụng cho nhiều trang.
+                Nhược điểm: cần tải file CSS bổ sung.
+            </p>
+        </section>
+
+        <!-- So sánh -->
+        <section>
+            <h2 style="color: #673AB7; font-size: 24px; margin: 20px 0;">So Sánh Ba Cách</h2>
+            <table border="1" style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+                <tr style="background-color: #f0f0f0;">
+                    <th style="padding: 10px; border: 1px solid #ddd;">Cách Nhúng</th>
+                    <th style="padding: 10px; border: 1px solid #ddd;">Ưu Điểm</th>
+                    <th style="padding: 10px; border: 1px solid #ddd;">Nhược Điểm</th>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ddd;">Inline Style</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">Nhanh chóng, dễ áp dụng</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">Khó quản lý, không tái sử dụng</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ddd;">Internal Style</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">Dễ quản lý, tái sử dụng</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">Chỉ áp dụng cho một trang</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ddd;">External Style</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">Tái sử dụng nhiều trang, dễ quản lý</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">Cần tải file bổ sung</td>
+                </tr>
+            </table>
+        </section>
+    </div>
+</body>
+</html>

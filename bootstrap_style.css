@@ -1,0 +1,252 @@
+/* Custom Bootstrap Styles */
+
+:root {
+    --primary-color: #667eea;
+    --secondary-color: #764ba2;
+    --light-bg: #f8f9fa;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+/* Navbar customization */
+.navbar {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #667eea !important;
+}
+
+.navbar-nav .nav-link {
+    transition: color 0.3s ease;
+    margin-left: 15px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #667eea !important;
+}
+
+/* Carousel customization */
+.carousel-placeholder {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.carousel-inner {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .carousel-placeholder {
+        height: 300px;
+    }
+
+    .carousel-placeholder h1 {
+        font-size: 28px !important;
+    }
+
+    .carousel-placeholder p {
+        font-size: 14px;
+    }
+}
+
+/* Section styling */
+section {
+    transition: all 0.3s ease;
+}
+
+section h2 {
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+section h2 i {
+    margin-right: 10px;
+    color: #667eea;
+}
+
+/* Card styling */
+.card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+    color: #333;
+    font-weight: 600;
+}
+
+.card-title i {
+    margin-right: 8px;
+    color: #667eea;
+}
+
+.card-body {
+    padding: 25px;
+}
+
+/* Service cards with icons */
+.card.text-center i {
+    color: #667eea;
+}
+
+.col-md-4 .card:hover i {
+    color: #764ba2;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+/* Form styling */
+.contact-form {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.form-label i {
+    margin-right: 8px;
+    color: #667eea;
+}
+
+.form-control {
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+.btn-primary {
+    background-color: #667eea;
+    border-color: #667eea;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #764ba2;
+    border-color: #764ba2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(102, 126, 234, 0.4);
+}
+
+.btn-primary i {
+    margin-right: 8px;
+}
+
+/* Footer styling */
+footer {
+    border-top: 3px solid #667eea;
+    margin-top: 60px;
+}
+
+footer a {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer a:hover {
+    color: #667eea !important;
+    transform: scale(1.2);
+}
+
+footer i {
+    font-size: 20px;
+}
+
+/* Scroll smooth behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Additional utilities */
+.text-primary {
+    color: #667eea !important;
+}
+
+.bg-primary {
+    background-color: #667eea !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    section {
+        padding: 30px 0 !important;
+    }
+
+    .display-5 {
+        font-size: 32px !important;
+    }
+
+    .display-6 {
+        font-size: 28px !important;
+    }
+
+    .navbar-nav .nav-link {
+        margin-left: 0;
+        padding: 10px 0;
+    }
+
+    .row {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+    .row > * {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+/* Animation for elements on scroll */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card, .contact-form {
+    animation: fadeInUp 0.6s ease-out;
+}
